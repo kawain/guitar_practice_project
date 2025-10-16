@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ダイアトニックコード・クイズ</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/diatonic_quiz.css" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <a href="./index.html">音合わせ</a>
+      <a href="./fretboard_quiz.html">指板クイズ</a>
+      <a href="./diatonic_quiz.html">ダイアトニッククイズ</a>
+      <a href="./chord_practice.html">コード練習</a>
+    </nav>
+    <div class="container">
+      <h1>ダイアトニックコード・クイズ</h1>
+      <p class="center">ダイアトニックコードを覚えましょう</p>
+
+      <!-- 統計情報表示エリア -->
+      <div class="stats">
+        <p>試行回数: <span id="attemptCount">0</span></p>
+        <p>正解数: <span id="correctCount">0</span></p>
+        <p>正解率: <span id="accuracyRate">0.00%</span></p>
+      </div>
+
+      <!-- クイズ本体エリア -->
+      <div class="quiz-area">
+        <p id="questionText" class="question"></p>
+        <div id="optionsContainer" class="options-container">
+          <!-- ラジオボタンがここに挿入されます -->
+        </div>
+        <button id="actionButton" class="button">問題を開始</button>
+      </div>
+
+      <!-- フィードバック、正解表示エリア -->
+      <div id="feedbackArea" class="feedback">
+        <!-- 正解/不正解のメッセージ、コード一覧がここに表示されます -->
+      </div>
+    </div>
+
+    <script type="module" src="./js/diatonic_quiz.js"></script>
+  </body>
+</html>

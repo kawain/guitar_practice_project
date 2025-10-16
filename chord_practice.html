@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コード練習</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <a href="./index.html">音合わせ</a>
+      <a href="./fretboard_quiz.html">指板クイズ</a>
+      <a href="./diatonic_quiz.html">ダイアトニッククイズ</a>
+      <a href="./chord_practice.html">コード練習</a>
+    </nav>
+    <div class="container">
+      <h1>コード練習</h1>
+      <p class="center">コードを覚えましょう</p>
+
+      <div class="svg-container">
+        <svg id="fretboard_svg" viewBox="0 0 830 220" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <div class="code-area">
+        <div class="chord-display">Current: <span id="currentChord">--</span></div>
+        <div class="chord-display">Next: <span id="nextChord">--</span></div>
+      </div>
+
+      <div class="controls">
+        <button id="actionButton">開始</button>
+
+        <div class="instrument-selector">
+          <label>楽器:</label>
+          <input type="radio" id="instrument_guitar" name="instrument" value="guitar" checked /> <label for="instrument_guitar">ギター</label>
+          <input type="radio" id="instrument_piano" name="instrument" value="piano" /> <label for="instrument_piano">ピアノ</label>
+        </div>
+
+        <div class="volume-control">
+          <label for="tempoSlider">テンポ:</label>
+          <input type="range" id="tempoSlider" min="60" max="200" value="120" />
+          <span id="tempoValue">120</span> BPM
+        </div>
+
+        <div class="volume-control">
+          <label for="volumeSlider">音量:</label>
+          <input type="range" id="volumeSlider" min="0" max="100" value="50" />
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/chord_practice.js"></script>
+  </body>
+</html>
